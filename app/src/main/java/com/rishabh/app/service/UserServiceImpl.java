@@ -19,4 +19,9 @@ public class UserServiceImpl implements UserService{
         System.out.print(user.getUserId());
         return repo.save(user);
     }
+
+    @Override
+    public UserType getUser(int userId) {
+        return repo.findById(userId).get();
+    }
 }

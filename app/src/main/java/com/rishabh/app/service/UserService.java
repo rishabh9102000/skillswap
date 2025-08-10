@@ -7,4 +7,5 @@ import org.springframework.stereotype.Component;
 public interface UserService {
 
     UserType addUser(UserType user);
+    UserType getUser(int userId);
 }
