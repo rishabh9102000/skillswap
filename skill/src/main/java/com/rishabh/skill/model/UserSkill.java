@@ -15,9 +15,9 @@ import lombok.NoArgsConstructor;
 public class UserSkill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
-    private Long userId;  // from User Microservice
-    private Long skillId; // from Skill
+    private Integer userSkilliId;
+    private Integer userId;  // from User Microservice
+    private Integer skillId; // from Skill
     @Enumerated(EnumType.STRING)
     private SkillType type; // TEACH or LEARN
 

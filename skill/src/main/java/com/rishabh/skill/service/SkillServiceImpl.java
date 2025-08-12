@@ -22,4 +22,10 @@ public class SkillServiceImpl implements SkillService {
 
         return skillRepo.save(skill);
     }
+
+    @Override
+    public Skill getSkill(String skillName) {
+        return skillRepo.findBySkillName(skillName);
+    }
+
 }

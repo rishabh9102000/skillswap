@@ -7,4 +7,5 @@ import org.springframework.stereotype.Component;
 @Component
 public interface SkillService {
      Skill addSkill(CreateSkillRequest skillRequest);
+     Skill getSkill(String skillName);
 }
