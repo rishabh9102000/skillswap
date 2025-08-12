@@ -1,9 +1,7 @@
 package com.rishabh.skill.model;
 
-import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -14,10 +12,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class Skill {
+public class UserSkill {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer skillId;
-    private String skillName;
-    private String category;
+    private Integer id;
+    private Long userId;  // from User Microservice
+    private Long skillId; // from Skill
+    @Enumerated(EnumType.STRING)
+    private SkillType type; // TEACH or LEARN
+
+
 }
